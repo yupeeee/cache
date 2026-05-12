@@ -53,3 +53,20 @@ Check PyTorch + Python 3.10 + CUDA 11.8:
 ```bash
 conda create -n test --dry-run python=3.10 pytorch pytorch-cuda=11.8 -c pytorch -c nvidia
 ```
+
+
+### Conda env pops up after disabling it in .bashrc
+
+VS Code often auto-activates the selected Python environment in new terminals.
+
+Open VS Code settings and search:
+```
+Python: Terminal Activate Environment
+```
+
+Disable it, or add this to `settings.json`:
+```json
+{
+  "python.terminal.activateEnvironment": false
+}
+```
