@@ -2,13 +2,13 @@
 
 Run:
 ```bash
-conda config --set auto_activate_base false
+conda config --set auto_activate false
 ```
 Then restart terminal.
 
 To re-enable it:
 ```bash
-conda config --set auto_activate_base true
+conda config --set auto_activate true
 ```
 
 
