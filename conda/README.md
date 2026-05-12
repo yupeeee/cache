@@ -30,3 +30,26 @@ Then restart terminal or run:
 ```bash
 source ~/.bashrc
 ```
+
+
+### Check available `cudatoolkit` versions for a specific Python version
+
+Check all available `cudatoolkit` builds:
+```bash
+conda search -c conda-forge cudatoolkit
+```
+
+Test compatibility with a specific Python version (e.g., 3.10):
+```bash
+conda create -n test-cuda --dry-run python=3.10 cudatoolkit -c conda-forge
+```
+
+Check a specific CUDA version:
+```bash
+conda create -n test-cuda --dry-run python=3.10 cudatoolkit=11.8 -c conda-forge
+```
+
+Check PyTorch + Python 3.10 + CUDA 11.8:
+```bash
+conda create -n test --dry-run python=3.10 pytorch pytorch-cuda=11.8 -c pytorch -c nvidia
+```
